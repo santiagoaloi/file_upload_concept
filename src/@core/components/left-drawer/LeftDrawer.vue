@@ -33,8 +33,8 @@
       <VListItem
         :ripple="false"
         active-color="primary"
-        prepend-icon="$mdiHomeOutline"
-        title="Dashboard"
+        prepend-icon="$mdiFile"
+        title="File-Input"
         to="/"
       />
     </VList>
