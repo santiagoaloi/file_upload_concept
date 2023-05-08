@@ -7,7 +7,6 @@
         label="Upload a file"
         prepend-inner-icon="$mdiFile"
         variant="solo"
-        @update:model-value="onFileSelected()"
       />
 
       <VBtn :disabled="!data.chosenFile.length" @click="uploadFile">Upload file</VBtn>
@@ -21,10 +20,6 @@ import axios from 'axios'
 const data = reactive({
   chosenFile: []
 })
-
-function onFileSelected(event) {
-  data.chosenFile = event.target.files[0]
-}
 
 async function uploadFile() {
   const formData = new FormData()
